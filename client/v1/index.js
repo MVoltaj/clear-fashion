@@ -155,10 +155,30 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 2. Log the variable
 // 3. Log the number of products by brands
 
+// let brandss = {}
+//for (let i = 0; i < nbr_product; i++) {
+ // if (!(marketplace[i]["brand"] in brandss)){
+   // brandss[marketplace[i]["brand"]] = [];
+  //}
+    //brandss[marketplace[i]["brand"]].push({
+//"date":marketplace[i]["date"],
+//"link":marketplace[i]["link"],
+//"name":marketplace[i]["name"],
+//"price":marketplace[i]["price"]
+ // });
+    
+//}
+//console.log(brandss)
+//for (const [key, value] of Object.entries(brandss)) {
+//  console.log(key, brandss[key].length);
+//}
+
 
 // 🎯 TODO: Sort by price for each brand
 // 1. For each brand, sort the products by price, from highest to lowest
 // 2. Log the sort
+
+
 
 
 // 🎯 TODO: Sort by date for each brand
