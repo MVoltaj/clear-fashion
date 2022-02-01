@@ -112,6 +112,21 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 1. Determine the average price of the marketplace
 // 2. Log the average
 
+//for (let i = 0; i < nbr_product; i++) {
+//  prices.push(marketplace[i]["price"])
+//}
+
+//function calculateAverage(array) {
+//    var total = 0;
+//    var count = 0;
+//    array.forEach(function(item, index) {
+//        total += item;
+//        count++;
+//    });
+//    return total / count;
+//}
+
+//console.log(calculateAverage(prices));
 
 
 
