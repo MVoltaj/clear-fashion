@@ -103,6 +103,10 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 1. Filter the list of products between 50€ and 100€
 // 2. Log the list
 
+//const results = marketplace.filter(element => {
+//  return element.price > 50 && element.price < 100;
+//});
+//console.log(results)
 
 // 🎯 TODO: Average price
 // 1. Determine the average price of the marketplace
