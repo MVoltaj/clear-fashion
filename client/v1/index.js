@@ -32,9 +32,12 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // I can find on these e-shops
 // 2. Log the variable
 
+// prices = []
+//for (let i = 0; i < nbr_product; i++) {
+//  prices.push(marketplace[i]["price"])
+//}
 
-
-
+//console.log(Math.min(...prices));
 
 /**
  * 👕
@@ -112,9 +115,7 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 1. Determine the average price of the marketplace
 // 2. Log the average
 
-//for (let i = 0; i < nbr_product; i++) {
-//  prices.push(marketplace[i]["price"])
-//}
+
 
 //function calculateAverage(array) {
 //    var total = 0;
