@@ -412,3 +412,5 @@ blueJacket = {
 // 🎯 TODO: Save in localStorage
 // 1. Save MY_FAVORITE_BRANDS in the localStorage
 // 2. log the localStorage
+//window.localStorage.setItem('MY_FAVORITE_BRANDS', MY_FAVORITE_BRANDS);
+//console.log(window.localStorage.getItem('MY_FAVORITE_BRANDS');
