@@ -382,6 +382,8 @@ jacket.favorite = true;
 // 1. Log `blueJacket` and `jacket` variables
 // 2. What do you notice?
 
+//Blue jacket and jacket variables are the same
+
 blueJacket = {
   'link': 'https://coteleparis.com/collections/tous-les-produits-cotele/products/la-veste-bleu-roi',
   'price': 110,
@@ -389,7 +391,14 @@ blueJacket = {
 };
 
 // 3. Update `jacket` property with `favorite` to true WITHOUT changing blueJacket properties
+//let jacket = {
+//    ...blueJacket
+//};
 
+//jacket.favorite = true;
+
+//console.log(jacket);
+//console.log(blueJacket);
 
 
 
