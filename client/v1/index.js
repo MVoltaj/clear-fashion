@@ -177,16 +177,41 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 🎯 TODO: Sort by price for each brand
 // 1. For each brand, sort the products by price, from highest to lowest
 // 2. Log the sort
-
-
+// function compare( a, b ) {
+//  if ( a.price < b.price ){
+//    return -1;
+//  }
+//  if ( a.price > b.price ){
+//    return 1;
+//  }
+//  return 0;
+//}
+//brandss["aatise"].sort(compare)
+//brandss["adresse"].sort(compare)
+//brandss["loom"].sort(compare)
+//brandss["dedicated"].sort(compare)
+//brandss[1083].sort(compare)
 
 
 // 🎯 TODO: Sort by date for each brand
 // 1. For each brand, sort the products by date, from old to recent
 // 2. Log the sort
 
+// function compare( a, b ) {
+//  if ( a.date < b.date ){
+//    return -1;
+//  }
+//  if ( a.date > b.date ){
+//    return 1;
+//  }
+//  return 0;
+//}
 
-
+//brandss["aatise"].sort(compare)
+//brandss["adresse"].sort(compare)
+//brandss["loom"].sort(compare)
+//brandss["dedicated"].sort(compare)
+//brandss[1083].sort(compare)
 
 
 /**
@@ -199,6 +224,29 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 🎯 TODO: Compute the p90 price value
 // 1. Compute the p90 price value of each brand
 // The p90 value (90th percentile) is the lower value expected to be exceeded in 90% of the products
+
+//let all_prices = []
+//for (let i = 0; i < Object.keys(brandss).length; i++) {
+//    let tempo = [];
+//    for(let j = 0; j< brandss[Object.keys(brandss)[i]].length;j++){
+//        tempo.push(brandss[Object.keys(brandss)[i]][j]["price"])
+//    }
+//   all_prices.push(tempo)
+//};
+//function tri( a, b ) {
+//    if ( a < b ){
+//        return -1;
+//    }
+//    if ( a > b ){
+//        return 1;
+//    }
+//   return 0;
+//}
+
+//for(let i = 0; i< all_prices.length;i++){
+//    all_prices[i].sort(tri)
+//    console.log(all_prices[i][Math.round(all_prices[i].length* 0.9)])
+//}
 
 
 
