@@ -324,6 +324,19 @@ const COTELE_PARIS = [
 // // 1. Log if we have new products only (true or false)
 // // A new product is a product `released` less than 2 weeks.
 
+//var today = new Date();
+//console.log(today.getTime())
+//var new_product = true
+
+
+//for(let i = 0; i < COTELE_PARIS.length; i++){
+//    COTELE_PARIS[i]["converted"] = Date.parse(COTELE_PARIS[i]["released"])
+//    if(COTELE_PARIS[i]["converted"] < today.getTime() - 3600*24*14){
+//        new_product = false
+//    }
+//}
+//console.log(new_product)
+
 
 // 🎯 TODO: Reasonable price
 // // 1. Log if coteleparis is a reasonable price shop (true or false)
