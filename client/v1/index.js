@@ -414,3 +414,6 @@ blueJacket = {
 // 2. log the localStorage
 //window.localStorage.setItem('MY_FAVORITE_BRANDS', MY_FAVORITE_BRANDS);
 //console.log(window.localStorage.getItem('MY_FAVORITE_BRANDS');
+
+
+

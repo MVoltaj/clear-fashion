@@ -22,7 +22,16 @@ const parse = data => {
           .text()
       );
 
-      return {name, price};
+      const link = "https://www.dedicatedbrand.com/en/men/t-shirts" + $(element)
+        .find('.productList-link')
+        .attr('href')
+
+      const img_link = $(element)
+        .find('.productList-image img')
+        .attr("data-src")
+        
+
+      return {name, price,link,img_link};
     })
     .get();
 };

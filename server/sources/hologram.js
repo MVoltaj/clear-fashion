@@ -12,13 +12,13 @@ const parse = data => {
   return $('.product-container')
     .map((i, element) => {
       const name = $(element)
-        .find('.product-reference')
+        .find('.product-name')
         .text()
         .trim();
 
       const price = parseInt(
         $(element)
-          .find('.price.product-price')
+          .find('.price')
           .text()
           .replace(' €','')
       );
@@ -28,7 +28,7 @@ const parse = data => {
         .attr('href');
 
       const link_image = $(element)
-        .find('.product_img_link img')
+        .find('.replace-2x.img-responsive.img_first')
         .attr('src');
 
       return {name, price, link, link_image};
