@@ -19,7 +19,6 @@ const getDB = module.exports.getDB = async () => {
       console.log('💽  Already Connected');
       return database;
     }
-console.log(MONGODB_URI);
     client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
     database = client.db(MONGODB_DB_NAME);
 
