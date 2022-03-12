@@ -10,7 +10,7 @@ const hologram = require('./sources/hologram');
 async function sandbox (eshop = "https://www.dedicatedbrand.com/en/men/t-shirts") {
 
   const {MongoClient} = require('mongodb');
-  const MONGODB_URI = 'mongodb+srv://MVoltaj:Max!Rav!27@cluster0.pxzgj.mongodb.net/Cluster0?retryWrites=true&w=majority';
+  const MONGODB_URI =  process.env.MONGODB_URI;
   const MONGODB_DB_NAME = 'clearfashion';
   const client = await MongoClient.connect(MONGODB_URI, {'useNewUrlParser': true});
   const db =  client.db(MONGODB_DB_NAME);
