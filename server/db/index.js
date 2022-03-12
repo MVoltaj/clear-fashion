@@ -59,18 +59,24 @@ module.exports.insert = async products => {
  * @param  {Array}  query
  * @return {Array}
  */
-module.exports.find = async query => {
+module.exports.find = async (query,limit = 12) => {
   try {
     const db = await getDB();
     const collection = db.collection(MONGODB_COLLECTION);
-    const result = await collection.find(query).toArray();
-
+    console.log(query)
+    const result = await collection.find(query).limit(limit).toArray();
     return result;
   } catch (error) {
     console.error('🚨 collection.find...', error);
     return null;
   }
 };
+
+
+
+
+
+
 
 /**
  * Close the connection
