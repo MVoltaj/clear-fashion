@@ -52,15 +52,7 @@ else if (typeof brand === 'undefined' && typeof price === 'undefined'){
     console.log("brand : False price : false")
   product = await db.find({},limit_int)
 }
-
-
-
-
-
-
-{ $lt: 20 }
-
-resp.send(product)
+resp.send(product);
 
 });
 
