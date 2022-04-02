@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {"src": "*.html", "use": "@vercel/static"},
-    {"src": "*.js", "use": "@vercel/node"},
+    {"src": "*.js", "use": "@now/node"},
     {"src": "*.css", "use": "@vercel/static"}
   ],
-  "routes": [{"src": "/", "dest": "index.html"}]
+  "routes": [{"src": "/", "dest": "client/v2/index.html"}]
 }

@@ -4,14 +4,66 @@
 // current products on the page
 let currentProducts = [];
 let currentPagination = {};
+if(typeof window === 'object'){
+  const selectShow = document.querySelector('#show-select');
+  const sectionProducts = document.querySelector('#products');
+  const spanNbProducts = document.querySelector('#nbProducts');
+  const selectBrand = document.querySelector('#brand-select');
+  const order_products = document.querySelector('#sort-select');
+  const max_price_products = document.querySelector('#price_input');
+
+    /**
+   * Declaration of all Listeners
+   */
+
+  /**
+   * Select the number of products to display
+   */
+  selectShow.addEventListener('change', async (event) => {
+    nbrProduct = parseInt(event.target.value);
+    const products = await fetchProducts(nbrProduct,brand,price);
+    
+    setCurrentProducts(products);
+    render(currentProducts, currentPagination);
+  });
+
+  selectBrand.addEventListener('change', async (event) => {
+    brand = event.target.value
+    let products
+    
+    if(brand !== 'loom' && brand !== "dedicated"){
+      const products = await fetchProducts(nbrProduct)
+    }
+    else{
+      products = await fetchProducts(nbrProduct,event.target.value,price)     
+    }
+    setCurrentProducts(products);
+    render(currentProducts, currentPagination);
+  });
+
+  max_price_products.addEventListener('change', async (event) => {
+    price = event.target.value
+    const products = await fetchProducts(nbrProduct,brand,price);
+
+    setCurrentProducts(products);
+    render(currentProducts, currentPagination);
+  });
+
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    const products = await fetchProducts();
+
+    setCurrentProducts(products);
+    render(currentProducts, currentPagination);
+  });
+
+ 
+}
+
+
 
 // instantiate the selectors
-const selectShow = document.querySelector('#show-select');
-const sectionProducts = document.querySelector('#products');
-const spanNbProducts = document.querySelector('#nbProducts');
-const selectBrand = document.querySelector('#brand-select');
-const order_products = document.querySelector('#sort-select');
-const max_price_products = document.querySelector('#price_input');
+
 let nbrProduct = 12;
 let price = 100000000;
 let brand ;
@@ -123,69 +175,3 @@ const render = (products, pagination) => {
   renderIndicators(pagination);
 };
 
-/**
- * Declaration of all Listeners
- */
-
-/**
- * Select the number of products to display
- */
-selectShow.addEventListener('change', async (event) => {
-  nbrProduct = parseInt(event.target.value);
-  const products = await fetchProducts(nbrProduct,brand,price);
-  
-  setCurrentProducts(products);
-  render(currentProducts, currentPagination);
-});
-
-selectBrand.addEventListener('change', async (event) => {
-  brand = event.target.value
-  let products
-  
-  if(brand !== 'loom' && brand !== "dedicated"){
-    const products = await fetchProducts(nbrProduct)
-  }
-  else{
-    products = await fetchProducts(nbrProduct,event.target.value,price)
-    
-  }
-  
-
-  
-  setCurrentProducts(products);
-  render(currentProducts, currentPagination);
-});
-
-max_price_products.addEventListener('change', async (event) => {
-  price = event.target.value
-  const products = await fetchProducts(nbrProduct,brand,price);
-
-  setCurrentProducts(products);
-  render(currentProducts, currentPagination);
-});
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', async () => {
-  const products = await fetchProducts();
-
-  setCurrentProducts(products);
-  render(currentProducts, currentPagination);
-});
-
-//Feature 1
-
-function test({a, b, c}){
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
-
-test({a:1,b:2,c:3})
-
-const condition = 1==2
-
-const tern = (condition ? "true" : "false")
